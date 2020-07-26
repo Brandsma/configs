@@ -1,0 +1,74 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+# Colors (Harmony dark)
+colors:
+  # Default colors
+  primary:
+    background: '0x0b1c2c'
+    foreground: '0xcbd6e2'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x0b1c2c'
+    cursor: '0xcbd6e2'
+
+  # Normal colors
+  normal:
+    black:   '0x0b1c2c'
+    red:     '0xbf8b56'
+    green:   '0x56bf8b'
+    yellow:  '0x8bbf56'
+    blue:    '0x8b56bf'
+    magenta: '0xbf568b'
+    cyan:    '0x568bbf'
+    white:   '0xcbd6e2'
+
+  # Bright colors
+  bright:
+    black:   '0x627e99'
+    red:     '0xbf8b56'
+    green:   '0x56bf8b'
+    yellow:  '0x8bbf56'
+    blue:    '0x8b56bf'
+    magenta: '0xbf568b'
+    cyan:    '0x568bbf'
+    white:   '0xf7f9fb'
+
+  indexed_colors:
+    - { index: 16, color: '0xbfbf56' }
+    - { index: 17, color: '0xbf5656' }
+    - { index: 18, color: '0x223b54' }
+    - { index: 19, color: '0x405c79' }
+    - { index: 20, color: '0xaabcce' }
+    - { index: 21, color: '0xe5ebf1' }
+
+# Background opacity
+#
+# Window opacity as a floating point number from `0.0` to `1.0`.
+# The value `0.0` is completely transparent and `1.0` is opaque.
+background_opacity: 0.97
+
+# Allow terminal applications to change Alacritty's window title.
+dynamic_title: true
+
+cursor:
+  # Cursor style
+  #
+  # Values for `style`:
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  style: Block
+
+  # Vi mode cursor style
+  #
+  # If the vi mode cursor style is `None` or not specified, it will fall back to
+  # the style of the active value of the normal cursor.
+  #
+  # See `cursor.style` for available options.
+  #vi_mode_style: None
+
+# Startup directory
+#
+# Directory the shell is started in. If this is unset, or `None`, the working
+# directory of the parent process will be used.
+working_directory: None
