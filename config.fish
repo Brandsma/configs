@@ -1,8 +1,11 @@
-abbr -a yr 'cal -y'
+# cargo abbreviations
 abbr -a c cargo
+abbr -a ct 'cargo t'
+# git abbreviations
 abbr -a g git
 abbr -a ga 'git add -A'
-abbr -a ct 'cargo t'
+abbr -a gc 'git commit -m '
+abbr -a gp 'git push '
 
 set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/bin /bin
 
@@ -19,6 +22,10 @@ else
 	abbr -a l 'ls'
 	abbr -a ll 'ls -l'
 	abbr -a lll 'ls -la'
+end
+
+if command -v bat > /dev/null
+    abbr -a cat 'bat'
 end
 
 begin

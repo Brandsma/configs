@@ -4,6 +4,7 @@
 
 # The following programs are relevant for a setup
 # https://github.com/junegunn/fzf
+# https://github.com/sharkdp/bat
 # https://github.com/sharkdp/fd
 # https://github.com/wting/autojump
 # https://fishshell.com/
@@ -18,11 +19,14 @@ SCRIPT=$(readlink -f "$BASH_SOURCE")
 SP=$(dirname "$SCRIPT")
 
 ## Alacritty config
+echo "Setting alacritty symlink"
 ln -s $SP/.alacritty.yml $HOME/.alacritty.yml 2&> /dev/null
 echo "Please change the default terminal to alacritty"
 
 ## Fish config
+echo "Setting fish symlink"
 ln -s $SP/config.fish $HOME/.config/fish/config.fish 2&> /dev/null
 
 ## Tmux config
+echo "Setting tmux symlink"
 ln -s $SP/.tmux.conf $HOME/.tmux.conf 2&> /dev/null
