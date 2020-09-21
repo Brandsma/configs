@@ -75,6 +75,10 @@ setenv FZF_DEFAULT_OPTS '--height 20%'
 # See https://github.com/fish-shell/fish-shell/issues/772
 set FISH_CLIPBOARD_CMD "cat"
 
+## Set PATH variables
+# Add golang programs
+set -x PATH /home/abe/go/bin $PATH
+
 function fish_prompt
 	set_color brblack
 	echo -n "["(date "+%H:%M")"] "
@@ -100,3 +104,4 @@ function fish_greeting
 	echo -e (uname -n | awk '{print " \\\\e[1mHostname: \\\\e[0;32m"$0"\\\\e[0m"}')
 	echo
 end
+
