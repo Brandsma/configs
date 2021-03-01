@@ -6,6 +6,7 @@ abbr -a g git
 abbr -a ga 'git add -A'
 abbr -a gc 'git commit -m '
 abbr -a gp 'git push '
+abbr -a f 'fzf'
 
 set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/bin /bin
 
@@ -51,6 +52,11 @@ set __fish_git_prompt_showstashstate ''
 set __fish_git_prompt_showupstream 'none'
 set -g fish_prompt_pwd_dir_length 3
 
+# Fish pyenv
+set PYENV_ROOT $HOME/.pyenv
+set -x PATH $PYENV_ROOT/shims $PYENV_ROOT/bin $PATH
+pyenv rehash
+
 # colored man output
 # from http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/
 setenv LESS_TERMCAP_mb \e'[01;31m'       # begin blinking
@@ -79,6 +85,11 @@ set FISH_CLIPBOARD_CMD "cat"
 # Add golang programs
 set -x PATH /home/abe/go/bin $PATH
 
+# Add org mode programs
+set -x PATH $PATH /home/abe/org/config/exec
+
+## End PATH variables
+
 function fish_prompt
 	set_color brblack
 	echo -n "["(date "+%H:%M")"] "
@@ -104,4 +115,3 @@ function fish_greeting
 	echo -e (uname -n | awk '{print " \\\\e[1mHostname: \\\\e[0;32m"$0"\\\\e[0m"}')
 	echo
 end
-
