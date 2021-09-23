@@ -11,7 +11,7 @@ abbr -a f 'fzf'
 set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/bin /bin
 
 if status --is-interactive
-	tmux ^ /dev/null; and exec true
+	tmux > /dev/null; and exec true
 end
 
 if command -v exa > /dev/null
